@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import mongoose from 'mongoose';
 import Article, { IArticle } from '../models/Article';
 import User from '../models/User';
 import Tag from '../models/Tag';
@@ -21,13 +20,12 @@ export const createArticle = async (req: AuthRequest, res: Response): Promise<vo
     summary,
     body,
     tags,
-    author: req.user._id, // Save the ObjectId of the user
+    author: req.user._id, 
   });
 
   try {
     await article.save();
 
-    // Ensure tags are added to the Tag collection
     for (const tagName of tags) {
       let tag = await Tag.findOne({ name: tagName });
       if (!tag) {

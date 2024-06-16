@@ -5,10 +5,9 @@ import userRoutes from './routes/userRoutes';
 import articleRoutes from './routes/articleRoutes';
 import tagRoutes from './routes/tagRoutes';
 
-// Load environment variables from .env file
 dotenv.config();
 
-// Connect to MongoDB
+
 connectDB();
 
 const app = express();
