@@ -12,9 +12,8 @@
 
 Open your terminal and run:
 
-open bash
-git clone https://github.com/RouginaNoeman77/Medium-Clone-TS-.git
-cd Medium-Clone-TS
+- git clone https://github.com/RouginaNoeman77/Medium-Clone-TS-.git
+- cd Medium-Clone-TS
 
 ### 2. Install Dependencies
 
