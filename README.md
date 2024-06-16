@@ -12,7 +12,7 @@
 
 Open your terminal and run:
 
-```bash
+open bash
 git clone https://github.com/RouginaNoeman77/Medium-Clone-TS-.git
 cd Medium-Clone-TS
 
