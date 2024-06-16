@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Article, { IArticle } from '../models/Article';
+import Article from '../models/Article';
 import User from '../models/User';
 import Tag from '../models/Tag';
 
@@ -92,7 +92,7 @@ export const getUserFeed = async (req: AuthRequest, res: Response): Promise<void
       const articles = await Article.find({
         $or: [
           { tags: { $in: followedTags } },
-          { author: { $in: followedPublishers } }, // Compare ObjectId
+          { author: { $in: followedPublishers } }, 
         ],
       }).sort({ createdAt: -1 }).populate('author', 'username');
 
